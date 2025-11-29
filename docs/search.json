@@ -38,5 +38,25 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
+  },
+  {
+    "objectID": "02_chapter.html",
+    "href": "02_chapter.html",
+    "title": "2  Chapter Title",
+    "section": "",
+    "text": "2.1 Section 1\nYour content. You can include R code:\nplot(cars)\n\n\n\n\nHealth disparities",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "02_chapter.html#section-2",
+    "href": "02_chapter.html#section-2",
+    "title": "2  Chapter Title",
+    "section": "2.2 Section 2",
+    "text": "2.2 Section 2\nMore content.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
   }
 ]
