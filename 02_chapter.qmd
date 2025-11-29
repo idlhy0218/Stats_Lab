@@ -1,0 +1,12 @@
+# Chapter Title
+
+## Section 1
+
+Your content. You can include R code:
+```{r plot-example, fig.cap="Health disparities"}
+plot(cars)
+```
+
+## Section 2
+
+More content.
