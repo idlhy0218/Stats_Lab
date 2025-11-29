@@ -1,0 +1,16 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "My Book Title"
+  author: "Your Name"
+  date: today
+  chapters:
+    - index.qmd
+    - 01_chapter.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
