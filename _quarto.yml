@@ -11,28 +11,12 @@ book:
     - index.qmd
     - 01_chapter.qmd
     - 02_chapter.qmd
-  
-  # Book navigation
-  sidebar:
-    style: "docked"
-    background: light
-  
-  # Search functionality
-  search: true
 
 format:
   html:
-    theme: none  # Using custom CSS instead
+    theme: cosmo
     css: custom.css
     toc: true
-    toc-depth: 3
-    toc-title: "Contents"
-    number-sections: true
-    code-fold: false
-    code-tools: true
+    number-sections: false
     code-copy: true
-    fig-width: 8
-    fig-height: 6
-    fig-align: center
-    link-external-newwindow: true
-    smooth-scroll: true
+    html-math-method: mathjax

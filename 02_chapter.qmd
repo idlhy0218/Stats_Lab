@@ -1,4 +1,4 @@
-# Chapter Title
+# Chapter 2: Probability Theory
 
 ## Section 1
 
@@ -10,5 +10,10 @@ plot(cars)
 ## Section 2
 
 More content.
-test
-test test2
+
+---
+
+## Navigation
+
+- [← Previous: Chapter 1](01_chapter.qmd)
+- [Back to Index](index.qmd)

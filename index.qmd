@@ -29,4 +29,14 @@ Whether you're studying public health, social sciences, business, or any field r
 
 ---
 
+## 📚 Chapters
+
+### [Chapter 1: Descriptive Statistics](01_chapter.qmd)
+Learn the fundamentals of summarizing and visualizing data, including measures of central tendency and dispersion.
+
+### [Chapter 2: Chapter Title](02_chapter.qmd)
+Coming soon...
+
+---
+
 *Last updated: 2026/01/19*

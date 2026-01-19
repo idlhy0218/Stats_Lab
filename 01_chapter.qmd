@@ -145,3 +145,10 @@ In this chapter, we covered:
 - **Group Comparisons**: Comparing statistics across groups reveals patterns and differences
 
 These foundational concepts are essential for understanding more advanced statistical methods in subsequent chapters.
+
+---
+
+## Navigation
+
+- [← Back to Index](index.qmd)
+- [Next: Chapter 2 →](02_chapter.qmd)
