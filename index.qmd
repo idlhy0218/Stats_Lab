@@ -1,7 +1,32 @@
 # Preface {.unnumbered}
 
-Welcome to this textbook.
+Welcome to **Statistics Laboratory**, a comprehensive guide designed to help undergraduate students master the fundamentals of statistical analysis.
 
 ## About This Book
 
-Course materials for undergraduate students.
+This textbook provides practical, hands-on experience with statistical concepts through real-world examples and R programming. Each chapter combines theoretical foundations with applied exercises, ensuring you develop both conceptual understanding and technical skills.
+
+### What You'll Learn
+
+- **Descriptive Statistics**: Summarizing and visualizing data
+- **Probability Theory**: Understanding randomness and uncertainty
+- **Inferential Statistics**: Making predictions from sample data
+- **Hypothesis Testing**: Drawing conclusions with confidence
+- **Regression Analysis**: Modeling relationships between variables
+- **R Programming**: Implementing statistical methods in practice
+
+### How to Use This Book
+
+Each chapter includes:
+
+- Clear explanations of statistical concepts
+- Mathematical formulas with intuitive interpretations
+- R code examples you can run and modify
+- Visualizations to enhance understanding
+- Practice exercises to reinforce learning
+
+Whether you're studying public health, social sciences, business, or any field requiring data analysis, this book will equip you with essential statistical tools.
+
+---
+
+*Last updated: 2026/01/19*

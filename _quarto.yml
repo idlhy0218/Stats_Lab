@@ -3,15 +3,36 @@ project:
   output-dir: docs
 
 book:
-  title: "My Book Title"
+  title: "Statistics Laboratory"
+  subtitle: "A Practical Guide for Undergraduate Students"
   author: "Your Name"
   date: today
   chapters:
     - index.qmd
     - 01_chapter.qmd
     - 02_chapter.qmd
+  
+  # Book navigation
+  sidebar:
+    style: "docked"
+    background: light
+  
+  # Search functionality
+  search: true
 
 format:
   html:
-    theme: cosmo
+    theme: none  # Using custom CSS instead
+    css: custom.css
     toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    number-sections: true
+    code-fold: false
+    code-tools: true
+    code-copy: true
+    fig-width: 8
+    fig-height: 6
+    fig-align: center
+    link-external-newwindow: true
+    smooth-scroll: true
