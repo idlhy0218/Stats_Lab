@@ -14,8 +14,7 @@ book:
 
 format:
   html:
-    theme: cosmo
-    css: custom.css
+    theme: [cosmo, custom.scss]
     toc: true
     number-sections: false
     code-copy: true
