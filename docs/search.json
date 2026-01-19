@@ -22,11 +22,11 @@
   {
     "objectID": "01_chapter.html",
     "href": "01_chapter.html",
-    "title": "1  Chapter Title",
+    "title": "1  Chapter 1: Descriptive Statistics",
     "section": "",
-    "text": "1.1 Section 1\nYour content. You can include R code:\nplot(cars)\n\n\n\n\nHealth disparities",
+    "text": "1.1 1.1 Introduction to Descriptive Statistics\nDescriptive statistics are methods used to summarize and describe the main features of a dataset. Unlike inferential statistics, which make predictions or inferences about a population based on a sample, descriptive statistics simply describe what the data shows.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
     ]
   },
   {
@@ -57,6 +57,56 @@
     "text": "2.2 Section 2\nMore content. test test test2",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "01_chapter.html#introduction-to-descriptive-statistics",
+    "href": "01_chapter.html#introduction-to-descriptive-statistics",
+    "title": "1  Chapter 1: Descriptive Statistics",
+    "section": "",
+    "text": "1.1.1 Key Purposes:\n\nSummarize large amounts of data in a meaningful way\nIdentify patterns and trends\nCommunicate findings clearly and concisely",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01_chapter.html#measures-of-central-tendency",
+    "href": "01_chapter.html#measures-of-central-tendency",
+    "title": "1  Chapter 1: Descriptive Statistics",
+    "section": "1.2 1.2 Measures of Central Tendency",
+    "text": "1.2 1.2 Measures of Central Tendency\nCentral tendency refers to the center or typical value of a dataset. The three main measures are:\n\n1.2.1 Mean (Average)\nThe arithmetic mean is calculated by summing all values and dividing by the number of observations:\n\\[\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n}\\]\n\n\n1.2.2 Median\nThe middle value when data is ordered from smallest to largest.\n\n\n1.2.3 Mode\nThe most frequently occurring value in the dataset.\n\n\n1.2.4 Example in R\n\n# Sample data: exam scores\nexam_scores &lt;- c(78, 85, 92, 88, 76, 95, 88, 82, 90, 88, 79, 91, 87, 85, 88)\n\n# Calculate measures of central tendency\nmean_score &lt;- mean(exam_scores)\nmedian_score &lt;- median(exam_scores)\nmode_score &lt;- as.numeric(names(sort(table(exam_scores), decreasing = TRUE)[1]))\n\n# Display results\ncat(\"Mean:\", mean_score, \"\\n\")\n\nMean: 86.13333 \n\ncat(\"Median:\", median_score, \"\\n\")\n\nMedian: 88 \n\ncat(\"Mode:\", mode_score, \"\\n\")\n\nMode: 88 \n\n# Visualize the distribution\nhist(exam_scores, \n     main = \"Distribution of Exam Scores\",\n     xlab = \"Score\",\n     ylab = \"Frequency\",\n     col = \"lightblue\",\n     border = \"darkblue\",\n     breaks = 8)\nabline(v = mean_score, col = \"red\", lwd = 2, lty = 2)\nabline(v = median_score, col = \"green\", lwd = 2, lty = 2)\nlegend(\"topright\", \n       legend = c(\"Mean\", \"Median\"),\n       col = c(\"red\", \"green\"),\n       lty = 2, lwd = 2)\n\n\n\n\nDistribution of Student Exam Scores",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01_chapter.html#measures-of-dispersion",
+    "href": "01_chapter.html#measures-of-dispersion",
+    "title": "1  Chapter 1: Descriptive Statistics",
+    "section": "1.3 1.3 Measures of Dispersion",
+    "text": "1.3 1.3 Measures of Dispersion\nDispersion measures describe how spread out the data is.\n\n1.3.1 Range\nThe difference between the maximum and minimum values:\n\\[\\text{Range} = \\max(x) - \\min(x)\\]\n\n\n1.3.2 Variance\nThe average of squared deviations from the mean:\n\\[s^2 = \\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n-1}\\]\n\n\n1.3.3 Standard Deviation\nThe square root of variance, expressed in the same units as the data:\n\\[s = \\sqrt{s^2}\\]\n\n\n1.3.4 Example in R\n\n# Calculate measures of dispersion\nrange_score &lt;- max(exam_scores) - min(exam_scores)\nvariance_score &lt;- var(exam_scores)\nsd_score &lt;- sd(exam_scores)\n\n# Display results\ncat(\"Range:\", range_score, \"\\n\")\n\nRange: 19 \n\ncat(\"Variance:\", variance_score, \"\\n\")\n\nVariance: 28.98095 \n\ncat(\"Standard Deviation:\", sd_score, \"\\n\")\n\nStandard Deviation: 5.383396 \n\n# Create boxplot to visualize spread\nboxplot(exam_scores,\n        main = \"Boxplot of Exam Scores\",\n        ylab = \"Score\",\n        col = \"lightgreen\",\n        border = \"darkgreen\",\n        horizontal = FALSE)\n\n# Add mean point\npoints(1, mean_score, col = \"red\", pch = 19, cex = 1.5)\nlegend(\"topright\", \n       legend = \"Mean\",\n       col = \"red\",\n       pch = 19)\n\n\n\n\nBoxplot Showing Data Spread",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01_chapter.html#comparing-multiple-groups",
+    "href": "01_chapter.html#comparing-multiple-groups",
+    "title": "1  Chapter 1: Descriptive Statistics",
+    "section": "1.4 1.4 Comparing Multiple Groups",
+    "text": "1.4 1.4 Comparing Multiple Groups\nLet’s compare exam scores across different study methods:\n\n# Create data for three study groups\nset.seed(123)\ngroup_A &lt;- c(78, 82, 85, 79, 88, 84, 81, 86, 83, 87)  # Traditional study\ngroup_B &lt;- c(88, 92, 90, 89, 95, 91, 93, 87, 94, 90)  # Group study\ngroup_C &lt;- c(72, 75, 78, 74, 80, 76, 73, 79, 77, 75)  # Minimal study\n\n# Combine into a data frame\nstudy_data &lt;- data.frame(\n  score = c(group_A, group_B, group_C),\n  method = rep(c(\"Traditional\", \"Group Study\", \"Minimal\"), each = 10)\n)\n\n# Summary statistics by group\naggregate(score ~ method, data = study_data, FUN = function(x) {\n  c(Mean = mean(x), SD = sd(x), Median = median(x))\n})\n\n       method score.Mean  score.SD score.Median\n1 Group Study  90.900000  2.601282    90.500000\n2     Minimal  75.900000  2.601282    75.500000\n3 Traditional  83.300000  3.335000    83.500000\n\n# Create comparative boxplot\nboxplot(score ~ method, data = study_data,\n        main = \"Exam Scores by Study Method\",\n        xlab = \"Study Method\",\n        ylab = \"Score\",\n        col = c(\"lightblue\", \"lightgreen\", \"lightcoral\"),\n        border = c(\"darkblue\", \"darkgreen\", \"darkred\"))\n\n\n\n\nComparison of Study Methods",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01_chapter.html#summary",
+    "href": "01_chapter.html#summary",
+    "title": "1  Chapter 1: Descriptive Statistics",
+    "section": "1.5 1.5 Summary",
+    "text": "1.5 1.5 Summary\nIn this chapter, we covered:\n\nMeasures of Central Tendency: Mean, median, and mode help us understand the “typical” value\nMeasures of Dispersion: Range, variance, and standard deviation describe data spread\nVisual Representations: Histograms and boxplots provide intuitive understanding of distributions\nGroup Comparisons: Comparing statistics across groups reveals patterns and differences\n\nThese foundational concepts are essential for understanding more advanced statistical methods in subsequent chapters.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: Descriptive Statistics</span>"
     ]
   }
 ]

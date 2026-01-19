@@ -1,12 +1,147 @@
-# Chapter Title
+# Chapter 1: Descriptive Statistics
 
-## Section 1
+## 1.1 Introduction to Descriptive Statistics
 
-Your content. You can include R code:
-```{r plot-example, fig.cap="Health disparities"}
-plot(cars)
+Descriptive statistics are methods used to summarize and describe the main features of a dataset. Unlike inferential statistics, which make predictions or inferences about a population based on a sample, descriptive statistics simply describe what the data shows.
+
+### Key Purposes:
+- **Summarize** large amounts of data in a meaningful way
+- **Identify** patterns and trends
+- **Communicate** findings clearly and concisely
+
+## 1.2 Measures of Central Tendency
+
+Central tendency refers to the center or typical value of a dataset. The three main measures are:
+
+### Mean (Average)
+The arithmetic mean is calculated by summing all values and dividing by the number of observations:
+
+$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
+
+### Median
+The middle value when data is ordered from smallest to largest.
+
+### Mode
+The most frequently occurring value in the dataset.
+
+### Example in R
+
+```{r central-tendency, fig.cap="Distribution of Student Exam Scores"}
+# Sample data: exam scores
+exam_scores <- c(78, 85, 92, 88, 76, 95, 88, 82, 90, 88, 79, 91, 87, 85, 88)
+
+# Calculate measures of central tendency
+mean_score <- mean(exam_scores)
+median_score <- median(exam_scores)
+mode_score <- as.numeric(names(sort(table(exam_scores), decreasing = TRUE)[1]))
+
+# Display results
+cat("Mean:", mean_score, "\n")
+cat("Median:", median_score, "\n")
+cat("Mode:", mode_score, "\n")
+
+# Visualize the distribution
+hist(exam_scores, 
+     main = "Distribution of Exam Scores",
+     xlab = "Score",
+     ylab = "Frequency",
+     col = "lightblue",
+     border = "darkblue",
+     breaks = 8)
+abline(v = mean_score, col = "red", lwd = 2, lty = 2)
+abline(v = median_score, col = "green", lwd = 2, lty = 2)
+legend("topright", 
+       legend = c("Mean", "Median"),
+       col = c("red", "green"),
+       lty = 2, lwd = 2)
 ```
 
-## Section 2
+## 1.3 Measures of Dispersion
 
-More content.
+Dispersion measures describe how spread out the data is.
+
+### Range
+The difference between the maximum and minimum values:
+
+$$\text{Range} = \max(x) - \min(x)$$
+
+### Variance
+The average of squared deviations from the mean:
+
+$$s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}$$
+
+### Standard Deviation
+The square root of variance, expressed in the same units as the data:
+
+$$s = \sqrt{s^2}$$
+
+### Example in R
+
+```{r dispersion, fig.cap="Boxplot Showing Data Spread"}
+# Calculate measures of dispersion
+range_score <- max(exam_scores) - min(exam_scores)
+variance_score <- var(exam_scores)
+sd_score <- sd(exam_scores)
+
+# Display results
+cat("Range:", range_score, "\n")
+cat("Variance:", variance_score, "\n")
+cat("Standard Deviation:", sd_score, "\n")
+
+# Create boxplot to visualize spread
+boxplot(exam_scores,
+        main = "Boxplot of Exam Scores",
+        ylab = "Score",
+        col = "lightgreen",
+        border = "darkgreen",
+        horizontal = FALSE)
+
+# Add mean point
+points(1, mean_score, col = "red", pch = 19, cex = 1.5)
+legend("topright", 
+       legend = "Mean",
+       col = "red",
+       pch = 19)
+```
+
+## 1.4 Comparing Multiple Groups
+
+Let's compare exam scores across different study methods:
+
+```{r group-comparison, fig.cap="Comparison of Study Methods"}
+# Create data for three study groups
+set.seed(123)
+group_A <- c(78, 82, 85, 79, 88, 84, 81, 86, 83, 87)  # Traditional study
+group_B <- c(88, 92, 90, 89, 95, 91, 93, 87, 94, 90)  # Group study
+group_C <- c(72, 75, 78, 74, 80, 76, 73, 79, 77, 75)  # Minimal study
+
+# Combine into a data frame
+study_data <- data.frame(
+  score = c(group_A, group_B, group_C),
+  method = rep(c("Traditional", "Group Study", "Minimal"), each = 10)
+)
+
+# Summary statistics by group
+aggregate(score ~ method, data = study_data, FUN = function(x) {
+  c(Mean = mean(x), SD = sd(x), Median = median(x))
+})
+
+# Create comparative boxplot
+boxplot(score ~ method, data = study_data,
+        main = "Exam Scores by Study Method",
+        xlab = "Study Method",
+        ylab = "Score",
+        col = c("lightblue", "lightgreen", "lightcoral"),
+        border = c("darkblue", "darkgreen", "darkred"))
+```
+
+## 1.5 Summary
+
+In this chapter, we covered:
+
+- **Measures of Central Tendency**: Mean, median, and mode help us understand the "typical" value
+- **Measures of Dispersion**: Range, variance, and standard deviation describe data spread
+- **Visual Representations**: Histograms and boxplots provide intuitive understanding of distributions
+- **Group Comparisons**: Comparing statistics across groups reveals patterns and differences
+
+These foundational concepts are essential for understanding more advanced statistical methods in subsequent chapters.
