@@ -1,21 +1,57 @@
-/* FT-Inspired Background and Header Colors Only */
+/* FT-Inspired Theme - CSS Variables Override */
 
-/* Background color */
-body {
-  background-color: #FFF9F5;
+:root {
+  /* Background colors */
+  --bs-body-bg: #FFF9F5;
+  --bs-body-color: #33302E;
+
+  /* Link colors */
+  --bs-link-color: #0D7680;
+  --bs-link-hover-color: #66605C;
+
+  /* Border colors */
+  --bs-border-color: #A23030;
 }
 
-/* Header colors */
+/* Typography */
+body {
+  font-family: Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, serif;
+}
+
 h1 {
   color: #33302E;
-  border-bottom: 3px solid #FFE4D6;
+  border-bottom: 3px solid #C39299;
+  padding-bottom: 0.5rem;
 }
 
 h2 {
   color: #66605C;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #98A088;
+  padding-bottom: 0.3rem;
 }
 
 h3 {
   color: #0D7680;
+}
+
+h4,
+h5,
+h6 {
+  color: #66605C;
+}
+
+/* Sidebar logo - remove checkerboard background */
+.sidebar-logo img,
+.navbar-brand img {
+  background-color: transparent !important;
+  mix-blend-mode: multiply;
 }
