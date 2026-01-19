@@ -1,4 +1,4 @@
-https://idlhy0218.github.io/Stats\_Lab/
+https://idlhy0218.github.io/Stats_Lab/
 
 
 
